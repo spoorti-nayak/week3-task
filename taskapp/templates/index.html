@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myy Task Schedulerr</title>
+    <style>
+        body {
+            
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            text-align: center;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #2d3748;
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin: 15px 0;
+        }
+        a {
+            text-decoration: none;
+            
+            
+            font-weight: bold;
+            color: #2b6cb0;
+            font-size: 1.4em;
+        }
+        a:hover {
+            color: #2c5282;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+       <!-- <h1>Welcome to Your Weekly Task Scheduler</h1>
+        <a href="#">Sunday</a>
+        <br>
+        <a href="#">Monday</a>
+                <br>
+
+        <a href="#">Tuesday</a>
+                <br>
+
+        <a href="#">Wednesday</a>
+                <br>
+
+        <a href="#">Thursday</a>
+                <br>
+
+        <a href="#">Friday</a>
+                <br>
+
+        <a href="#">Saturday</a>-->
+
+        <h1> Select a day:</h1>
+        <ul>
+        {% for day in days %}
+        <li><a href="{% url 'day_task' day=day %}">{{ day }}</a></li>
+        {% endfor %}
+    </ul>
+        
+        
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
